@@ -10,15 +10,13 @@ class CountPalinSubSeq {
   } 
  
  for(int l=2;l<=len;l++){
-  for(int i=0;i<len;i++){
+  for(int i=0;i<=len-l;i++){
    int k = l+i-1;
-   if(k<len){
    if(str.charAt(i) == str.charAt(k)){
       calculate[i][k] = calculate[i][k-1]+calculate[i+1][k]+1;
      }else {
        calculate[i][k] = calculate[i][k-1]+calculate[i+1][k]-calculate[i+1][k-1];
      }
-    } 
     }
    }
   System.out.println(calculate[0][len-1]);
