@@ -41,7 +41,7 @@ class TopologicalSort{
   ts.addEdge(src, dest);
   }
   Iterator<Integer> ite;
- for(int i=0;i<6;i++){
+ for(int i=0;i<nov;i++){
   ite = arr[i].listIterator();
   if(!visited[i]){
     ts.sort(i);
