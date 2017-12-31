@@ -28,13 +28,18 @@ class TopologicalSort{
   stack.push(i);
  }
  public static void main(String[] args){
-  TopologicalSort ts = new TopologicalSort(6);
-  ts.addEdge(5,0);
-  ts.addEdge(4,0);
-  ts.addEdge(4,1);
-  ts.addEdge(5,2);
-  ts.addEdge(1,3);
-  ts.addEdge(2,3); 
+  System.out.println("Enter number of vertices");
+  Scanner sc = new Scanner(System.in);
+  int nov = sc.nextInt();
+  TopologicalSort ts = new TopologicalSort(nov);
+  System.out.println("Enter number of edges");
+  int noe = sc.nextInt();
+  System.out.println("Enter source and destination of edge");
+  for(int i=0;i<noe;i++){
+  int src=sc.nextInt();
+  int dest = sc.nextInt();
+  ts.addEdge(src, dest);
+  }
   Iterator<Integer> ite;
  for(int i=0;i<6;i++){
   ite = arr[i].listIterator();
@@ -42,6 +47,7 @@ class TopologicalSort{
     ts.sort(i);
    }
   }
+ System.out.println("Sorted vertices");
  while(!stack.isEmpty()){
     System.out.println(stack.pop());
   }
