@@ -28,9 +28,10 @@ class InsertInTree{
  }
 
  public void print(Node root){
-   if(root.left != null){
+   if(root != null){
+     print(root.left); 
      System.out.println(root.data);
-     print(root.left);
+     print(root.right);
   }
  }
 
@@ -42,7 +43,8 @@ class InsertInTree{
      System.out.println("Enter data in tree");
      int data = sc.nextInt();
      iit.insert(node, data);
-  }
-  iit.print(node);
+   }
+   System.out.println("Data are");
+   iit.print(node);
  }
 }
