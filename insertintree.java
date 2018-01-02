@@ -34,7 +34,18 @@ class InsertInTree{
      print(root.right);
   }
  }
-
+ 
+ public void leftView(Node root){
+  if(root!=null){
+    System.out.println(root.data);
+    if(root.left == null){
+      leftView(root.right);
+   }else{
+    leftView(root.left);
+   }
+  }
+ }
+ 
  public static void main(String[] args){
    Scanner sc = new Scanner(System.in);
    InsertInTree iit = new InsertInTree();
@@ -46,5 +57,7 @@ class InsertInTree{
    }
    System.out.println("Data are");
    iit.print(node);
+   System.out.println("left Data are");
+   iit.leftView(node);
  }
 }
