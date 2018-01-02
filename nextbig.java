@@ -23,31 +23,36 @@ class NextBig{
       arr[i] = arr[j];
       min = arr[j];
       arr[j] = temp;
+     }
     }
-   }
    if(minf<min && min<max){
        if(max!=100001)
          arrList.add(max);
        max = min;
    }else{
-   arrList.add(min);
+      arrList.add(min);
     }
-   }
+  }
   if(max == 100001){ 
     System.out.println("Not possible");
   }else{
     ans = Integer.toString(max);
-  for(int i=0;i<size-1;i++){
-   ans = ans+Integer.toString(arrList.get(i));
+    for(int i=0;i<size-1;i++){
+      ans = ans+Integer.toString(arrList.get(i));
+    }
+   System.out.println(ans);
   }
-  System.out.println(ans);
- }
  }
  public static void main(String args[]){
   NextBig obj = new NextBig();
-   Scanner sc = new Scanner(System.in);
-   String no = sc.next();
-   String str[] = no.split("");
-   obj.sortAndFind(str);
+  Scanner sc = new Scanner(System.in);
+  System.out.println("Number of test cases");
+  int test = sc.nextInt();
+  for(int i=0;i<test;i++){
+    System.out.println("Enter number");
+    String no = sc.next();
+    String str[] = no.split("");
+    obj.sortAndFind(str);
+   }
   }
 }
