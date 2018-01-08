@@ -1,3 +1,6 @@
+/*
+  Given an array of N elements, you are required to find the maximum sum of lengths of all non-overlapping subarrays with K as the maximum      element in the subarray.
+*/
 import java.util.*;
 
 class MaxSubArray{
