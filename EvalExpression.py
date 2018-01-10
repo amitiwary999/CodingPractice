@@ -1,3 +1,5 @@
+#Given two expressions in the form of strings. The task is to compare them and check
+#if they are similar. Expressions consist of lowercase alphabets, '+', '-' and  '( )'.
 import random
 count = int(input())
 for index in range(count):
