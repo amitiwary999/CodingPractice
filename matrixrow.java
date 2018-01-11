@@ -1,3 +1,5 @@
+/*Determine the row index with minimum number of ones. The given 2D matrix has only zeroes and ones and also the matrix is sorted row wise . If two or more rows have same number of 1's than print the row with smallest index.
+Note: If there is no '1' in any of the row than print '-1'.*/
 import java.util.*;
 
 class MatrixRow{
