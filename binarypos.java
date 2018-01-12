@@ -1,3 +1,4 @@
+/*Given a decimal number m. Convert it in binary string and apply n iterations, in each iteration 0 becomes 01 and 1 becomes 10. Find kth character in the string after nth iteration.*/
 import java.util.*;
 
 class BinaryPos{
