@@ -1,6 +1,6 @@
 import queue
 
-def op(A):
+def operation(A):
     res = []
     q_odd = queue.Queue()
     q_even = queue.Queue()
@@ -40,6 +40,6 @@ if __name__ == '__main__':
     
     for _ in range(T):
         N = int(input().strip())
-        A = list(map(lambda x: int(x), input().strip().split(' ')))
+        numbers = list(map(lambda x: int(x), input().strip().split(' ')))
         
-        op(A)
+        operation(numbers)
