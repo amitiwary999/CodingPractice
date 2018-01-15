@@ -20,17 +20,23 @@ class OddEven{
      number[i] = String.valueOf(oddNumber);
      number[oddIndex] = String.valueOf(num); 
      oddNumber = 0;
-    }
+     evenNumber = 0;
+     evenIndex = -1;
+    }else{
      evenNumber = num;
      evenIndex = i;
+    }
    }else if((i+1)%2 != 0 && num%2 == 0){
     if(evenNumber != 0 && evenIndex != -1){
      number[i] = String.valueOf(evenNumber);
      number[evenIndex] = String.valueOf(num);
      evenNumber = 0;
-    }
+     oddNumber = 0;
+     oddIndex = -1;
+    }else{
      oddNumber = num;
      oddIndex = i;
+    }
    }
   i++;
   }
