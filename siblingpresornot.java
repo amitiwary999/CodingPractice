@@ -1,3 +1,6 @@
+/*
+ Print node having no sibling.
+*/
 import java.util.*;
 
 class SiblingPresOrNot{
