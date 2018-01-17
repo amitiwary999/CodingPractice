@@ -52,7 +52,7 @@ class SumTree{
     sum += arr.get(i).data;
     if(sum == k){
       count++;
-    } 
+    }
    }
   arr.remove(root);
   }
@@ -76,8 +76,8 @@ class SumTree{
    k = sc.nextInt();
    System.out.println("Data are");
    iit.print(node);
-   System.out.println("paths having node sum "+k);
    iit.routecount(node, k);
+   System.out.println("paths having node sum "+k);
    iit.printCount();
  }
 }
