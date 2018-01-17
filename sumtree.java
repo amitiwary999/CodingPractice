@@ -1,3 +1,6 @@
+/*
+ find number of paths having sum k 
+*/
 import java.util.*;
 
 class SumTree{
@@ -56,7 +59,7 @@ class SumTree{
  }
 
  public void printCount(){
-     System.out.print(count);
+     System.out.println(count);
  }
 
  public static void main(String[] args){
