@@ -1,3 +1,6 @@
+/*
+ Two strings are given. Modify 1st string such that all the common characters of the 2nd strings have to be removed and the uncommon      characters  of the 2nd string have to be concatenated with uncommon characters of the 1st string.
+*/
 import java.util.*;
 
 class AddUncommon{
