@@ -29,6 +29,9 @@ class TelephoneSearch{
      }
     }
    }
+  if(blacklist.size() == nos){
+   System.out.print("0");
+  }
   System.out.println("");
   }
  }
