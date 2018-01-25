@@ -1,3 +1,6 @@
+/*
+Given two numbers. Add the numbers and find the count of carries in their addition.
+*/
 import java.util.*;
 
 class FindCarries{
