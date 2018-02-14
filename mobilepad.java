@@ -1,3 +1,7 @@
+/*
+Given the mobile numeric keypad. You can only press buttons that are up, left, right or down to the current button. You are not allowed to press bottom row corner buttons (i.e. * and # ).
+Given a number N, find out the number of possible numbers of given length.
+*/
 import java.util.*;
 
 class MobilekeyPad{
