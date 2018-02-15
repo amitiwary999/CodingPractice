@@ -1,3 +1,7 @@
+/*
+Given an input stream of n characters consisting only of small case alphabets the task is to find the first non repeating character each time a character is inserted to the stream.
+*/
+
 import java.util.LinkedList;
 import java.util.Scanner;
 import java.util.LinkedHashSet;
