@@ -1,3 +1,7 @@
+/*
+Given an array of integers A and a sum B, find all unique combinations in A where the sum is equal to B. The same repeated number may be chosen from A unlimited number of times.
+*/
+
 import java.util.*;
 import java.lang.*;
 import java.io.*;
