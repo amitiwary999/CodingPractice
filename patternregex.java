@@ -1,3 +1,6 @@
+/*
+Given a pattern string and a test string, Your task is to implement RegEx substring matching. If the pattern is preceded by a ^, the pattern(excluding the ^) will be matched with the starting position of the text string. Similarly, if it is preceded by a $, the pattern(excluding the ^) will be matched with the ending position of the text string. If no such markers are present, it will be checked whether pattern is a substring of test.
+*/
 import java.util.*;
 import java.lang.*;
 import java.io.*;
