@@ -16,17 +16,9 @@ class InversionArray{
      min = arr[i];
    for(int j=i+1;j<size;j++){
      if(arr[j] < min){
-      //min =arr[j];
-      //flag = j;
       count++;
      }
    }
-  /*if(flag != i){
-    int temp = arr[flag];
-    arr[flag] = arr[i];
-    arr[i] = temp;
-    count++;
-   }*/
   }
  System.out.println(count);
  }
