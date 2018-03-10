@@ -24,13 +24,14 @@ class ArrayDiff{
    System.out.println(maxArray[k]);
   } 
 
- int j=0,k=0,diff=0;
+ int j=0,k=0,diff=-1;
  while(j<size && k<size){
    if(minArray[j] <= maxArray[k]){
-     diff = (j-k) < diff ? diff : (j-k);
-     j++;
-   }else{
+     diff = (k-j) < diff ? diff : (k-j);
+     System.out.println("j"+j+" "+maxArray[k]+" "+minArray[j]); 
      k++;
+   }else{
+     j++;
    }
   }
  System.out.println(diff);
