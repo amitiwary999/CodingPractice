@@ -36,5 +36,14 @@ class ArrayWave{
  if(check == 0){
    System.out.print(array[last]);
   } 
+ System.out.println();
+ System.out.println("*****lexicographically smallest solution*****");
+
+ for(int i=0;i<size-1;i=i+2){
+   System.out.print(array[i+1]+" "+array[i]+" ");
+  }
+ if(check == 0){
+  System.out.print(array[size-1]);
+ }
  }
 } 
