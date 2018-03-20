@@ -1,3 +1,14 @@
+/*
+Given two sequences, find the length of longest subsequence present in both of them. Both the strings are of uppercase.
+Input:
+First line of the input contains no of test cases  T,the T test cases follow.
+Each test case consist of 2 space separated integers A and B denoting the size of string str1 and str2 respectively
+The next two lines contains the 2 string str1 and str2 .
+
+Output:
+For each test case print the length of longest  common subsequence of the two strings .
+*/
+
 import java.util.*;
 
 class AmazonQue22{
