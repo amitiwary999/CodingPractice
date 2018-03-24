@@ -15,17 +15,17 @@ class ConsecutiveOne{
   int replaceZero = sc.nextInt();
   int j=0, startIndex=0, max=0; 
   while(j<size){
-   if(arr[j] == 0){
+   if(array[j] == 0){
     if(replaceZero > 0){
      replaceZero--;
     }else{
-     while(startIndex <= j && array[startIndex]!= 0){
-      startIndex++;
+     while(startIndex <= j && array[startIndex++]!= 0){
      }
     } 
    }
    j++;
    max = Math.max(max, j-startIndex);
-  }  
+  } 
+  System.out.println(max); 
  }
 }     
