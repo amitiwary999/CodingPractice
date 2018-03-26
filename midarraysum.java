@@ -11,11 +11,11 @@ class MidArraySum{
   int array2[] = new int[size];
   System.out.println("Enter array 1");
   for(int k=0;k<size;k++){
-    array1[i] = sc.nextInt();
+    array1[k] = sc.nextInt();
   }
   System.out.println("Enter array 2");
   for(int k=0;k<size;k++){
-   array2[i] = sc.nextInt();
+   array2[k] = sc.nextInt();
   }
   while(i+j <= size){
     if(i+j == size-1 || i+j == size){
