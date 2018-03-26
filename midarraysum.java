@@ -27,5 +27,6 @@ class MidArraySum{
      j++;
    }
   }
+ System.out.println(sum);
  }
 }
