@@ -22,7 +22,7 @@ class NextSmallPalin{
    array[(size-1)-i] = array[i];
   }
   for(i=0;i<size;i++){
-   System.out.println(array[i]+" ");
+   System.out.print(array[i]+" ");
   }
  }
 }
