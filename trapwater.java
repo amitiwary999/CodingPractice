@@ -10,6 +10,7 @@ class TrapWater{
   int leftMax[] = new int[number];
   int rightMax[] = new int[number];
   int vol = 0;
+  System.out.println("Enter height of bars");
   for(int i=0;i<number;i++){
    bars[i] = sc.nextInt();
   }
