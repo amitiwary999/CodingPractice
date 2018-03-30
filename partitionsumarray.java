@@ -38,6 +38,5 @@ class PartitionSumArray{
   } else {
      System.out.println("NO");
    }
-  }
  }
 }
