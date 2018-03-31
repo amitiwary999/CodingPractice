@@ -6,7 +6,7 @@ class NofTriangle{
   System.out.println("Enter size of array");
   int size = sc.nextInt();
   int array[] = new int[size];
-  int min = 0, temp, flag, ans = 0;
+  int min = 0, temp, flag=0, ans = 0;
   System.out.println("Enter array element");
   for(int i=0;i<size;i++){
    array[i] = sc.nextInt();
