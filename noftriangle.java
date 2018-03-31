@@ -1,3 +1,16 @@
+/*
+Given an unsorted array of positive integers. Find the number of triangles that can be formed with three different array elements as lengths of three sides of triangles. 
+Input: 
+The first line of the input contains T denoting the number of testcases. First line of test case is the length of array N and second line of test case are its elements.
+
+Output:
+Number of possible triangles are displayed to the user.
+
+Constraints:
+1 <=T<= 100
+3 <=N<= 100
+1 <=arr[i]<= 1000
+*/
 import java.util.*;
 
 class NofTriangle{
