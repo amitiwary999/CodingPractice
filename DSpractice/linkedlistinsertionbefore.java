@@ -11,7 +11,7 @@ class LinkedListInsertionBefore{
   }
  }
 
- public void print(Node head){
+ public void print(){
   Node node = head;
   if(node != null){
     System.out.println(node.data);
@@ -22,10 +22,10 @@ class LinkedListInsertionBefore{
   }
  }
 
- public void insertionBefore(Node nextNode, Node head){
+ public void insertionBefore(Node nextNode){
    Node node = head;
+  if(node != null){
    if(nextNode != null){
-     if(node != null){
        while(node.next == nextNode){
          node = node.next;
       }
@@ -33,6 +33,9 @@ class LinkedListInsertionBefore{
      newNode.next = node.next;
      node.next = newNode;
      }
+    }else{
+     Node newNode = new Node(121);
+     head = newNode;
    }
  }
 
@@ -50,8 +53,8 @@ class LinkedListInsertionBefore{
     node[i] = new Node(sc.nextInt());
     node[i-1].next = node[i];
    }
-   llib.print(llib.head);
-   llib.insertionBefore(llib.head.next.next,llib.head);
-   llib.print(llib.head);
+   llib.print();
+   llib.insertionBefore(llib.head.next.next);
+   llib.print();
  }
 }
