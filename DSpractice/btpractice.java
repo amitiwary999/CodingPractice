@@ -36,6 +36,25 @@ class BTpractice{
     } 
    }
 
+ public Node deleteTree(Node root, int key){
+  if(root == null){
+     return root;
+  }
+  if(root.data > key){
+    root.left = deleteTree(root.left, key);
+  }else if(root.data < key){
+    root.right = deleteTree(root.right, key);
+  }else if(root.data == key){
+    if(root.left == null){
+       return root.right;
+    }else if(root.right == null){
+       return root.left;
+    }else{
+      
+    }
+  }
+ }
+ 
  public static void main(String[] args){
   BTpractice bt = new BTpractice();
   Scanner sc = new Scanner(System.in);
