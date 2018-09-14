@@ -1,8 +1,22 @@
 import java.util.*;
+import java.time.*;
 
 class LambdaFunction{
 
  public int calculation(int a, int b, Mathematics doOperation){
+   ZonedDateTime now = ZonedDateTime.now( ZoneOffset.UTC );
+   Instant instant = Instant.now();
+System.out.println("time "+now+"   "+now.toInstant().toEpochMilli()+"   "+instant);
+Calendar rightNow = Calendar.getInstance();
+
+// offset to add since we're not UTC
+
+long offset = rightNow.get(Calendar.ZONE_OFFSET) +
+    rightNow.get(Calendar.DST_OFFSET);
+
+long sinceMidnight = (rightNow.getTimeInMillis());
+
+System.out.println(sinceMidnight + " milliseconds since midnight   "+now.toInstant().toEpochMilli());
    return doOperation.operation(a, b);
  }
 
@@ -17,7 +31,6 @@ class LambdaFunction{
  
  interface Mathematics{
     int operation(int a, int b);
-    float operation(int a, float b);
   }
 }
 

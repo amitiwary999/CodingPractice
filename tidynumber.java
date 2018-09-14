@@ -13,20 +13,30 @@ class TidyNumber{
     long numberLong = sc.nextLong();
     String number = String.valueOf(numberLong);
     int size = number.length();
+    int prevLastNumber = 10;
     int lastnumber = Integer.parseInt(Character.toString(number.charAt(size-1)));
     for(int j=size-2;j>=0;j--){
       int secondLastNumber = Integer.parseInt(Character.toString(number.charAt(j)));
-      if(secondLastNumber > lastnumber){
+      if(secondLastNumber >= lastnumber || secondLastNumber >=prevLastNumber){
+        if(secondLastNumber==0){
+           secondLastNumber = 9;
+        }else{
         secondLastNumber--;
+        }
         answer[i] = answer[i]+"9";
          System.out.println(secondLastNumber+" "+lastnumber+"  "+answer[i]);
       }else{
         answer[i] = lastnumber+answer[i];
         System.out.println(secondLastNumber+" "+lastnumber+"  "+answer[i]);
       }   
+      prevLastNumber = lastnumber;
       lastnumber = secondLastNumber;
     }
-    System.out.println(lastnumber+answer[i]);
+    if(lastnumber == 0){
+      System.out.println(answer[i]);
+    }else{
+      System.out.println(lastnumber+answer[i]);
+    }
    }
   
   
