@@ -24,10 +24,8 @@ class TidyNumber{
         secondLastNumber--;
         }
         answer[i] = answer[i]+"9";
-         System.out.println(secondLastNumber+" "+lastnumber+"  "+answer[i]);
       }else{
         answer[i] = lastnumber+answer[i];
-        System.out.println(secondLastNumber+" "+lastnumber+"  "+answer[i]);
       }   
       prevLastNumber = lastnumber;
       lastnumber = secondLastNumber;
