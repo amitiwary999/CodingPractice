@@ -20,11 +20,11 @@ sc.nextLine();
     }
     int flag = 0;
     for(int j=0;j<25;j++){
-      int big = results[j];
+      int big = letterCount[j];
       int pos = j;
       for(int k=j+1; k<26; k++){
-       if(big<results[k]){
-          big = results[k];
+       if(big<letterCount[k]){
+          big = letterCount[k];
           pos = k;
        }
     }
