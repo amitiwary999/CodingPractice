@@ -14,7 +14,9 @@ class AddTwoLinkedList{
 
 
   public void pushInList(int data){
-
+     Node nd = new Node(data);
+     nd.next = head;
+     head = nd;
   }
   public static void main(String[] args){
    AddTwoLinkedList add = new AddTwoLinkedList();
