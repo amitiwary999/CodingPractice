@@ -20,11 +20,24 @@ class GoldMine{
       Arrays.fill(rows, 0); 
     }
 
+    int right=0, rightUp=0,rightDown=0;
     for(int col=0; col<noc; col++){
       for(int row=0;row<nor;row++){
-        if(col<noc-1){
-         if(row<nor-1){
-           
+        if(col<noc){
+         if(row<nor){
+           if(col == 0){
+             right = 0;
+             rightUp=0;
+             rightDown=0;  
+          }else if(row==nor-1){
+             right = mine[row][col-1]+mine[row][col];
+             rightUp=0;
+             rightDown = mine[row-1][col-1];
+          }else if(row == 0){
+           rightDown=0;
+           rightUp=mine[row+1][col-1];
+           right = mine[row][col-1];
+          }
          }
       }
     }
