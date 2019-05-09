@@ -38,7 +38,7 @@ class GoldMine{
           }else{
              right = mine[row][col-1];  
             rightUp=mine[row+1][col-1];
-           right = mine[row][col-1]; 
+           rightDown = mine[row-1][col-1]; 
           }
  
         int max = Math.max(right, Math.max(rightUp, rightDown));
