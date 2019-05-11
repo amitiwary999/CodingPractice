@@ -17,8 +17,33 @@ class MaxWork{
      endTime[i] = e;
     }
 
-   for(int i=0; i<now; i++){
+   
+   for(int i=0; i<now-1; i++){
+     int timeEnd = endTime[i];
+     int timeStart = startTime[i];
+     int flag = i;
+     int temp = endTime[i];
+     for(int j=i+1; j<now; j++){
+      if(temp > endTime[j]){
+        temp = endTime[j];
+        flag = j;
+      }
+    }
+    int test = endTime[i];
+    endTime[i] = endTime[flag];
+    startTime[i] = startTime[flag];
+    endTime[flag] = timeEnd;
+    startTime[flag] = timeStart;
+   } 
 
+   int incArray = endTime[0];
+   int ans = 1;
+   for(int i=1;i<now;i++){
+     if(startTime[i] >= incArray){
+       incArray = endTime[i];
+       ans++;
+    }
    }
-   }
+   System.out.println("ans is"+ans);
+  }
 }
