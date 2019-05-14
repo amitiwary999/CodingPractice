@@ -29,10 +29,11 @@ class TwoSortedArray{
   int flag = 0;
   int finalArrayPos = 0;
   int finalArray[] = new int[fSize+sSize];
+  int i=0, j=0;
 
-  for(int j=0; j<sSize; j++){
+  for(j=0; j<sSize; j++){
    int temp = secondArray[j];
-   for(int i=flag; i<fSize; i++){
+   for(i=flag; i<fSize; i++){
      if(firstArray[i] < temp){
        finalArray[finalArrayPos] = firstArray[i];
        finalArrayPos++;
@@ -43,9 +44,36 @@ class TwoSortedArray{
       break;
     }
    }
+   
+  if(i == fSize){
+     finalArray[finalArrayPos] = secondArray[j];
+     finalArrayPos++;
+   }
   }
 
-  for(int i=0;i<fSize+sSize; i++){
+  j--;
+  if(j<sSize-1){
+   while(j<sSize){
+    finalArray[finalArrayPos] = secondArray[j];
+    finalArrayPos++;
+    j++;
+   }
+  }else if(flag<fSize-1){
+   while(flag<fSize){
+    finalArray[finalArrayPos] = firstArray[flag];
+    finalArrayPos++;
+    flag++;
+    }
+   }
+   else if(flag<fSize && finalArrayPos<((sSize+fSize))){
+     while(flag<fSize){
+      finalArray[finalArrayPos] = firstArray[flag];
+      finalArrayPos++;
+      flag++;
+    }
+   }
+
+  for(i=0;i<fSize+sSize; i++){
     System.out.println("ans "+finalArray[i]);
   }
  } 
