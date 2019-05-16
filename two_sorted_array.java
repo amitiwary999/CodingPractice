@@ -26,6 +26,9 @@ class TwoSortedArray{
    secondArray[i] = sc.nextInt();
   }
 
+  System.out.println("Enter the position of element to find in merged array");
+  int kPos = sc.nextInt();
+
   int flag = 0;
   int finalArrayPos = 0;
   int finalArray[] = new int[fSize+sSize];
@@ -44,7 +47,6 @@ class TwoSortedArray{
       break;
     }
    }
-   
   if(i == fSize){
      finalArray[finalArrayPos] = secondArray[j];
      finalArrayPos++;
@@ -73,9 +75,7 @@ class TwoSortedArray{
     }
    }
 
-  for(i=0;i<fSize+sSize; i++){
-    System.out.println("ans "+finalArray[i]);
-  }
+   System.out.println("Kth element of merged array "+finalArray[kPos-1]);
  } 
 
 }
