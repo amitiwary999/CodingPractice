@@ -1,3 +1,24 @@
+/*
+Implement the next permutation, which rearranges numbers into the numerically next greater permutation of numbers.
+
+If such arrangement is not possible, it must be rearranged as the lowest possible order ie, sorted in an ascending order.
+
+The replacement must be in-place, do not allocate extra memory.
+
+Examples:
+
+1,2,3 → 1,3,2
+
+3,2,1 → 1,2,3
+
+1,1,5 → 1,5,1
+
+20, 50, 113 → 20, 113, 50
+Inputs are in the left-hand column and its corresponding outputs are in the right-hand column.
+
+
+*/
+
 public class Solution {
     public void nextPermutation(ArrayList<Integer> a) {
         int size = a.size();
@@ -65,4 +86,46 @@ public class Solution {
         }
     }
 }
+
+
+
+
+/*
+
+Better way
+
+public class Solution {
+	public void nextPermutation(ArrayList<Integer> a) {
+	    int n = a.size();
+	    int index = -1;
+	    for (int i = n-1; i > 0; i--) {
+            if (a.get(i) > a.get(i-1)) {
+                index = i-1;
+                break;
+            }
+        }
+       
+        if (index == -1) {
+            Collections.sort(a);
+        }
+        else {
+           
+            int swapWithIndex = -1;
+            for(int j = n-1; j >index; j--) {
+                if (a.get(j) > a.get(index)) {
+                    swapWithIndex = j;
+                    break;
+                }
+            }
+          
+            int temp = a.get(index);
+            a.set(index, a.get(swapWithIndex));
+            a.set(swapWithIndex, temp);
+           
+            Collections.sort(a.subList(index+1, n));
+        }
+	}
+}
+
+*/
 
