@@ -51,6 +51,49 @@ public class Solution {
     public int maxProfit(final List<Integer> A) {
         int size = A.size();
         int ans = 0;
+      //  int[] temp = new int[size];
+        int[] minA = new int[size];
+        int[] maxA = new int[size];
+        if(size > 0){
+            int min = A.get(0);
+            minA[0]=0;
+            for(int i=1; i<size-1;i++){
+                min = min(min, A.get(i));
+                int temp = max(minA[i-1], A.get(i)-min);
+                minA[i]=temp;
+            }
+            
+            int max = A.get(size-1);
+            maxA[size-1]=0;
+            for(int i=size-2; i>=0; i--){
+                max = max(max, A.get(i));
+                int temp = max(maxA[i+1], max - A.get(i));
+                maxA[i]=temp;
+            }
+            
+            for(int i=0; i<size; i++){
+                ans = max(ans, minA[i]+maxA[i]);
+            }
+        }
+        return ans;
+    }
+    
+    static int max(int num1, int num2){
+        return num1>num2?num1:num2;
+    }
+    
+    static int min(int num1, int num2){
+        return num2>num1?num1:num2;
+    }
+}
+*/
+
+/*
+public class Solution {
+    // DO NOT MODIFY THE LIST. IT IS READ ONLY
+    public int maxProfit(final List<Integer> A) {
+        int size = A.size();
+        int ans = 0;
         int[] temp = new int[size];
         if(size > 0){
             for(int i=0;i<size-1;i++){
