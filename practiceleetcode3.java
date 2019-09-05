@@ -12,13 +12,17 @@ class Solution {
         for(int i=1;i<size;i++){
             if(charMap.get(charArray[i]) != null){
                 int pos = charMap.get(charArray[i]);
-                count[i] = count[i-1]>count[pos]?count[pos]:count[i-1];
+                for(int j=1;j<=count[pos];j++){
+                    if(posMap.get(j) != null &&(posMap.get(j)>=pos && posMap.get(j)<i)){
+                        count[i]=j;
+                        break;
+                    }
+                }
             }else{
                 charMap.put(charArray[i], i);
                 count[i]=count[i-1]+1;
             }
             posMap.put(count[i], i);
-            System.out.println(count[i]+" "+i+" "+count[i-1]+" "+count[charMap.get(charArray[i])]+" "+charMap.get(charArray[i]));
             max = max>count[i]?max:count[i];
         }
         
@@ -33,15 +37,6 @@ class Solution {
                 flag=pos;
             }
         }
-        // for(int i=1;i<size;i++){
-        //     System.out.println(count[i]+" "+count[i-1]);
-        //     if(count[i]==count[i-1]){
-        //         flag++;
-        //     }else{
-        //         ans.add(flag);
-        //         flag=1;
-        //     }
-        // }
         return ans;
     }
 }
