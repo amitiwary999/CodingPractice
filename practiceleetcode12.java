@@ -79,6 +79,38 @@ class Solution {
         }
         return 1;
     }
+
+/*
+class Solution {
+public int longestStrChain(String[] words) {
+	Set<String> dict = new HashSet<>(Arrays.asList(words));
+	Map<String, Integer> memo = new HashMap<>();
+	int result = 0;
+	for (String word : words) {
+		result = Math.max(result, helper(word, dict, memo));
+	}
+	return result;
+}
+
+private int helper(String word, Set<String> dict, Map<String, Integer> memo) {
+	if (memo.containsKey(word)) {
+		return memo.get(word);
+	}
+	if (!dict.contains(word)) {
+		return 0;
+	}
+	int result = 0;
+	for (int i = 0; i < word.length(); i++) {
+		String newWord = new StringBuilder(word).deleteCharAt(i).toString();
+		if (dict.contains(newWord)) {
+			result = Math.max(result, helper(newWord, dict, memo));
+		}
+	}
+	memo.put(word, result + 1);
+	return result + 1;
+}
+}
+*/
     
     static int max(int num1, int num2){
         return num1>num2?num1:num2;
